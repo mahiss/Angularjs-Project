@@ -15,7 +15,10 @@ export class Page2Component implements OnInit {
             this.newItem = "";
         }
     }
-    // Delete function
+    /**
+     * Delete function
+     * @param index
+     */
     removeItem = function (index) {
         this.items.splice(index, 1);
     }

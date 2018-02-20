@@ -21,6 +21,7 @@ import { trigger,state,style,transition,animate,keyframes } from '@angular/anima
         ]),
     ]
 })
+
 export class AppComponent {
     state: string = 'small';
     animateMe() {
