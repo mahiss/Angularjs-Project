@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title text-center">Item's List</h3>
+        </div>
+        <div class="panel-body">
+          <form class="form-inline">
+            <div class="form-group">
+              <input [(ngModel)]="newItem" name="newitem" placeholder="Add Item" class="form-control addText">
+            </div>
+            <button (click)="pushItem()" class="btn btn-primary">Add</button>
+          </form>
+          <div class="clearfix"></div>
+          <br/>
+          <ul class="list-group">
+            <li class="list-group-item" *ngFor="let i of items; let ind = index">
+              {{i}}
+              <button (click)="removeItem(ind)" type="button" class="close" aria-label="Close"><span
+                      aria-hidden="true">&times;</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
