@@ -8,12 +8,14 @@ import {Component, OnInit} from '@angular/core';
 export class Page2Component implements OnInit {
     items = ["Angular 4", "React", "Underscore"];
     newItem = "";
+    // Add Function
     pushItem = function () {
         if (this.newItem != "") {
             this.items.push(this.newItem);
             this.newItem = "";
         }
     }
+    // Delete function
     removeItem = function (index) {
         this.items.splice(index, 1);
     }
